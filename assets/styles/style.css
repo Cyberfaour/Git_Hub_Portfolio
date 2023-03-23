@@ -1,0 +1,77 @@
+@font-face {
+    font-family:Aquire ;
+    src: url("../fonts/AquireBold-8Ma60.otf") format("opentype");
+
+}
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    background: rgb(0, 0, 0);
+    font-family: "Lucida Console", Monaco, monospace;
+    
+}
+
+header {
+    font-family: 'Aquire', sans-serif;
+    background: url("../images/tech.gif");
+    color: rgb(252, 107, 17);
+   
+}
+
+h1{
+    font-family: 'Aquire', sans-serif;
+}
+header .avatar{
+    background: url("../images/avatar.jpeg");
+    width: 13rem;
+    height: 13rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    animation: border_color 5s ease-in infinite;
+}
+header .link i{
+    font-size: 20px;
+}
+.about{
+    background: rgb(31, 30, 30);
+    border-radius: 25px;
+}
+.about .card{
+    box-shadow: -5px -5px 1px  rgba(252, 247, 250, 0.829) ;
+    background: #000000;
+    filter: blur(0.4px);
+    
+}
+
+.projects i{
+    font-size: 45px;
+}
+.projects .card{
+    box-shadow: 0.5rem 0.5rem rgba(252, 247, 250, 0.829);
+    cursor:pointer;
+    background-color: #ffffff;
+    transition:background-color  1s ease-in-out,box-shadow 1s ease-in-out ;
+}
+.projects .card:hover{
+    background-color: #000000;
+    color: lawngreen;
+    
+    box-shadow: -5px -5px 1px  lawngreen ;
+}
+
+@keyframes border_color {
+    0%{
+       border:  rgb(252, 107, 17) solid 0.2rem;
+    }
+    50%{
+        border:  rgb(252, 178, 17) solid 0.2rem;
+
+    }
+    100%{
+        border:  rgb(252, 107, 17) solid 0.2rem;
+
+    }
+    
+}
