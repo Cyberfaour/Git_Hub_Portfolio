@@ -71,7 +71,7 @@ header .navbar .navbar-toggler-icon {
   width: 20px; /* Set the width */
   height: 20px; /* Set the height */
 }
-header p {
+header p, header .badge {
   font-family: "Lucida Console", Monaco, monospace;
 }
 header .wrap {
@@ -83,7 +83,7 @@ header .chevron {
   height: 50px;
   background-size: cover;
   animation: chevronAnimation 3s infinite;
-  margin-top: 5rem !important;
+  margin-top: 6rem !important;
 }
 
 .about {
@@ -190,5 +190,13 @@ footer {
   }
   100% {
     transform: translateY(0); /* Move back to the default position */
+  }
+}
+@media (max-width: 600px) {
+  .about, header {
+    height: 48rem;
+  }
+  .about .carousel, header .carousel {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

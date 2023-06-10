@@ -73,7 +73,7 @@ header {
     }
     
   }
-  p{
+  p, .badge{
     font-family: "Lucida Console", Monaco, monospace;
     
   }
@@ -86,7 +86,7 @@ header {
     height: 50px;
     background-size: cover;
     animation: chevronAnimation 3s infinite ;
-    margin-top: 5rem !important;
+    margin-top: 6rem !important;
     
   }
 }
@@ -213,4 +213,13 @@ footer{
   100% {
     transform: translateY(0); /* Move back to the default position */
   }
+}
+@media (max-width: 600px) {
+
+ .about ,header{
+  height: 48rem;
+  .carousel {
+    display: none;
+  }}
+  
 }
