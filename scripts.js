@@ -1,20 +1,51 @@
-const skillTitles = document.querySelectorAll('.skill-title');
-const pathway = document.getElementById('pathway');
+function setCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
 
-skillTitles.forEach((title) => {
-  title.addEventListener('click', () => {
-    pathway.innerHTML = '';
-    const leaves = document.createElement('div');
-    leaves.id = 'leaves';
-    pathway.appendChild(leaves);
+function acceptCookies() {
+  setCookie("cookieConsent", "true", 365);
+  document.getElementById("cookieBanner").style.display = "none";
+}
 
-    const leafCount = Math.floor(Math.random() * 10) + 5;
+function rejectCookies() {
+  setCookie("cookieConsent", "false", 365);
+  document.getElementById("cookieBanner").style.display = "none";
+}
 
-    for (let i = 0; i < leafCount; i++) {
-      const leaf = document.createElement('div');
-      leaf.classList.add('leaf');
-      leaf.style.animationDelay = `${i * 0.1}s`;
-      leaves.appendChild(leaf);
-    }
-  });
-});
+function checkCookieConsent() {
+  var cookieConsent = getCookie("cookieConsent");
+  if (cookieConsent) {
+    document.getElementById("cookieBanner").style.display = "none";
+  }
+}
+
+function getCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+checkCookieConsent();
+
+function updateViewCount() {
+  var countElement = document.getElementById("count");
+  if (localStorage.viewCount) {
+    localStorage.viewCount = Number(localStorage.viewCount) + 1;
+  } else {
+    localStorage.viewCount = 1;
+  }
+  countElement.textContent = localStorage.viewCount;
+}
+
+updateViewCount();

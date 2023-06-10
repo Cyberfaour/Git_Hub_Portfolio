@@ -24,10 +24,16 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script src="./scripts.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 
   <body class="">
+    <div class="cookie-banner" id="cookieBanner">
+      <p>This website uses cookies. By continuing to use this site, you consent to the use of cookies.</p>
+      <button onclick="acceptCookies()">Accept</button>
+      <button onclick="rejectCookies()">Reject</button>
+    </div>
     <header class=" mb-5 ">
       <!-- place navbar here -->
       <nav class="navbar navbar-expand-lg bg-body-tertiary p-md-4 ">
@@ -89,6 +95,8 @@
             <a href="https://github.com/Cyberfaour" class="link mx-2"
               ><i class="fab fa-github text-light"></i
             ></a>
+            <span id="viewCount"><i class="fa fa-eye" aria-hidden="true"></i> <span id="count">0</span></span>
+
             <a
               href="mailto:ali2001faour@outlook.com"
               class="text-decoration-none text-light"
@@ -99,7 +107,9 @@
         </div>
         
       </div>
-      <div class="chevron m-auto mt-5 "></div>
+      <div class="chevron m-auto mt-5 ">
+        <a href="#About"></a>
+      </div>
     </header>
 
     <main class="m-5 py-5 px-md-5">
@@ -197,10 +207,13 @@
       </section>
       
       <section id="Projects"class="projects my-5 justify-content-center d-md-flex row p-5 ">
+        <div class="svg-container" >
+          
+        </div>
         <h1 class="text-center pb-5 text-light">Areas of expertise</h1>
 
-        <div class="d-lg-flex gap-5  rounded-2 justify-content-center">
-          <div id="card" class="card text-center p-3 mb-3 col-md-3">
+        <div class="d-lg-flex gap-5  justify-content-center">
+          <div id="card" class="card text-center p-3 mb-4 col-md-3">
             <div class="card-body">
               <i class="fa fa-code mb-5" aria-hidden="true"></i>
               <h4 class="card-title">Software Engineering</h4>
@@ -208,7 +221,7 @@
               <a href="" class="">View More</a>
             </div>
           </div>
-          <div class="card text-center p-3 mb-3 col-md-3">
+          <div class="card text-center p-3 mb-4 col-md-3">
             <div class="card-body">
               <i class="fa fa-laptop mb-5" aria-hidden="true"></i>
               <h4 class="card-title">Embedded Systems & Design</h4>
@@ -216,7 +229,7 @@
               <a href="https://github.com/Cyberfaour" class="">View More</a>
             </div>
           </div>
-          <div class="card text-center p-3 mb-3 col-md-3">
+          <div class="card text-center p-3 mb-4 col-md-3">
             <div class="card-body">
               <i class="fa fa-cloud mb-5" aria-hidden="true"></i>
               <h4 class="card-title">Networking Solutions</h4>
@@ -338,23 +351,26 @@
         <div class="container">
           <h1 class="text-center">Contact Form</h1>
           <form action="https://formspree.io/f/moqzooaa" method="POST">
-            <div class="form-group">
+            <div class="form-group mb-2">
               <label for="name">Name:</label>
               <input type="text" id="name" name="name" class="form-control" required>
             </div>
-      
-            <div class="form-group">
+            <div class="form-group mb-2">
+              <label for="companyName">Company Name:</label>
+              <input id="companyName" name="company" class="form-control" required></input>
+            </div>
+            <div class="form-group mb-2">
               <label for="email">Email:</label>
               <input type="email" id="email" name="email" class="form-control" required>
             </div>
       
-            <div class="form-group">
+            <div class="form-group mb-2">
               <label for="message">Message:</label>
               <textarea id="message" name="message" class="form-control" required></textarea>
             </div>
       
            
-            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            <button type="submit" class="btn submit-button  mt-3">Submit</button>
           </form>
         </div>
         
@@ -429,5 +445,7 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
+    
+
   </body>
 </html>

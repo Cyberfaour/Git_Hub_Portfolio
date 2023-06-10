@@ -32,6 +32,25 @@ h1 {
   font-family: "Aquire", sans-serif;
 }
 
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+  z-index: 999;
+}
+
+.cookie-banner button {
+  background-color: #9b06b9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
 header {
   font-family: "Aquire", sans-serif;
   background: url("../images/layered-steps-haikei (2).svg") no-repeat;
@@ -88,18 +107,13 @@ header .chevron {
 
 .about {
   background: #330155;
-  box-shadow: 1rem 1rem #9b06b9;
+  box-shadow: 2rem 2rem #f09205;
   transition: box-shadow 1s ease-in-out;
   height: 75vh;
 }
-.about .card {
-  box-shadow: -5px -5px 1px rgba(252, 247, 250, 0.829);
-  background: rgba(155, 6, 185, 0.368627451);
-  filter: blur(0.4px);
-}
 
 .about:hover {
-  box-shadow: 1rem -1rem white;
+  box-shadow: 2rem -2rem white;
 }
 
 .projects i {
@@ -114,12 +128,12 @@ header .chevron {
 .projects .card:hover {
   background-color: #9b06b9;
   color: white;
-  box-shadow: -5px -5px 1px white;
+  box-shadow: -5px -5px 1px #f09205;
 }
 
 .skills {
   background: rgba(252, 247, 250, 0.829);
-  box-shadow: -1rem 1rem #7b2ab1;
+  box-shadow: -2rem 2rem #f09205;
   transition: box-shadow 1s ease-in-out;
 }
 .skills ul {
@@ -159,7 +173,19 @@ header .chevron {
 }
 
 .skills:hover {
-  box-shadow: 1rem -1rem #9b06b9;
+  box-shadow: 2rem -2rem #9b06b9;
+}
+
+.submit-button {
+  background-color: #fcfcfc;
+  color: #9b06b9;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
 }
 
 footer {
