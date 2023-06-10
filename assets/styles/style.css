@@ -197,7 +197,6 @@ footer {
     height: 48rem;
   }
   .about .card, header .card {
-    width: 22rem !important;
     vertical-align: middle;
   }
   .about .carousel, header .carousel {
