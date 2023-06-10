@@ -24,17 +24,39 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 
   <body class="">
-    <header class="py-5 mb-5">
+    <header class=" mb-5 ">
       <!-- place navbar here -->
-      <div class="container d-md-flex justify-content-center py-2 p-sm-3">
-        <img class="col-md-1 avatar" src="./assets/images/avatar.jpeg" alt="" />
-        <div class="col-md-3"></div>
-        <div class="contents col-md-7">
-          <h1 class="">Welcome to my portfolio</h1>
-          <span class="badge p-2 m-1 rounded-pill text-bg-light"
+      <nav class="navbar navbar-expand-lg bg-body-tertiary p-md-4 ">
+        <div class="container-fluid">
+          <div class=""></div>
+          <!-- <button class="navbar-toggler  " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button> -->
+          <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+            <div class="navbar-nav m-auto ">
+              <a class="nav-link active text-white"aria-current="page" href="#">About</a>
+              <a class="nav-link text-white" href="#Projects">Projects</a>
+              <a class="nav-link text-white " href="#Skills">Skills</a>
+              <a class="nav-link text-white " href="#Contact">Contact</a>
+
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container  justify-content-md-center">
+       
+        <div class="wrap col-md-12 d-md-flex">
+        
+        <div class="contents m-auto col-md-12 mt-4 px-5">
+          <h1 class="mb-4">Welcome to my portfolio</h1>
+          <p class="w-sm-50 ">Through this portfolio, I invite you to explore my work, projects, 
+            and achievements, which highlight my ability to design and develop robust software applications, tackle complex challenges, and contribute to cutting-edge advancements in the field. Join me on this journey as we delve into
+             the realm of computer engineering and discover the possibilities together</p>
+          <span class="badge p-2 m-1  rounded-pill text-bg-light"
             >Computer Engineering</span
           >
           <span class="badge p-2 m-1 rounded-pill text-bg-light"
@@ -44,7 +66,7 @@
             >Cloud Engineering</span
           >
           <span class="badge p-2 m-1 rounded-pill text-bg-light">Java</span>
-          <span class="badge p-2 m-1 rounded-pill text-bg-light">I.T.</span>
+          <span class="badge p-2 m-1 rounded-pill text-bg-light">.NET Core</span>
           <span class="badge p-2 m-1 rounded-pill text-bg-light"
             >Cybersecurity</span
           >
@@ -74,36 +96,36 @@
             >
           </div>
         </div>
+        </div>
+        
       </div>
+      <div class="chevron m-auto mt-5 "></div>
     </header>
 
-    <main class="m-5 px-md-5">
-      <section class="about mt-5 justify-content-center d-lg-flex row p-3">
+    <main class="m-5 py-5 px-md-5">
+
+      <section id="About" class="about mt-5 justify-content-center d-lg-flex row p-3">
         <h1 class="text-center pb-5 text-light">About</h1>
-        <div class="container d-md-flex pb-5">
-          <div class="col-md-8">
+        <div class="container d-md-flex ">
+          <div class="col-md-8 mb-md-5">
             <div class="card m-auto w-75 h-100 text-light">
-              <div class="card-body">
+              <div class="card-body ">
                 <h4 class="card-title text-wrap text-decoration-underline">
-                  Lorem ipsum
+                  Ali Faour
                 </h4>
-                <p class="card-text">
+                <p class="card-text ">
                   Throughout my academic journey, I have gained extensive
                   experience in a range of programming languages, including
                   Python, Java, C++, and JavaScript. I am also proficient in
                   automation and have the ability to design and implement
                   automated solutions that streamline business operations,
-                  reduce errors, and improve efficiency. Additionally, my
-                  expertise in software engineering and responsive web
-                  development has equipped me with the knowledge and skills
-                  needed to design and develop high-quality software and web
-                  applications.
+                  reduce errors, and improve efficiency.
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-4 ">
             <div
               id="carouselId"
               class="carousel slide vert"
@@ -134,7 +156,7 @@
                   aria-label="Second slide"
                 ></li>
               </ol>
-              <div class="carousel-inner" role="listbox">
+              <div class="carousel-inner p-5 " role="listbox">
                 <div class="carousel-item active">
                   <img
                     class="mb-5 d-block mx-auto pb-3"
@@ -168,37 +190,38 @@
           </div>
         </div>
       </section>
-      <section class="projects mt-5 justify-content-center d-md-flex row p-5">
+      
+      <section id="Projects"class="projects my-5 justify-content-center d-md-flex row p-5 ">
         <h1 class="text-center pb-5 text-light">Areas of expertise</h1>
 
-        <div class="d-lg-flex gap-5 rounded-2 justify-content-center">
-          <div id="card" class="card text-center p-3 col-md-3">
+        <div class="d-lg-flex gap-5  rounded-2 justify-content-center">
+          <div id="card" class="card text-center p-3 mb-3 col-md-3">
             <div class="card-body">
               <i class="fa fa-code mb-5" aria-hidden="true"></i>
               <h4 class="card-title">Software Engineering</h4>
-              <p class="card-text">Lorem ipsum dolor sit.</p>
+              <!-- <p class="card-text">Lorem ipsum dolor sit.</p> -->
               <a href="" class="">View More</a>
             </div>
           </div>
-          <div class="card text-center p-3 col-md-3">
+          <div class="card text-center p-3 mb-3 col-md-3">
             <div class="card-body">
               <i class="fa fa-laptop mb-5" aria-hidden="true"></i>
               <h4 class="card-title">Embedded Systems & Design</h4>
-              <p class="card-text">Lorem ipsum dolor sit.</p>
-              <a href="" class="">View More</a>
+              <!-- <p class="card-text">Lorem ipsum dolor sit.</p> -->
+              <a href="https://github.com/Cyberfaour" class="">View More</a>
             </div>
           </div>
-          <div class="card text-center p-3 col-md-3">
+          <div class="card text-center p-3 mb-3 col-md-3">
             <div class="card-body">
               <i class="fa fa-cloud mb-5" aria-hidden="true"></i>
               <h4 class="card-title">Networking Solutions</h4>
-              <p class="card-text">Lorem ipsum dolor sit.</p>
-              <a href="" class="">View More</a>
+              <!-- <p class="card-text">Lorem ipsum dolor sit.</p> -->
+              <a href="https://github.com/Cyberfaour" class="">View More</a>
             </div>
           </div>
         </div>
       </section>
-      <section class="skills mt-5 justify-content-center d-md-flex row p-5">
+      <section id="Skills" class="skills my-5 justify-content-center d-md-flex row p-5">
         <h1 class="text-center pb-5 text-white">Technical Skills</h1>
         <div class="container d-lg-flex gap-5 pb-5 justify-content-center">
           <ul class="col-md-3">
@@ -220,10 +243,12 @@
               <ul>
                 <li class="leaf">HTML</li>
                 <li class="leaf">CSS</li>
+                <li class="leaf">PHP</li>
                 <li class="leaf">SCSS/Bootstrap</li>
                 <li class="leaf">React</li>
                 <li class="leaf">Node.js</li>
                 <li class="leaf">Express.js</li>
+                <li class="leaf">MongoDb/MySql</li>
               </ul>
             </li>
           </ul>
@@ -300,65 +325,87 @@
         </div>
 
       </section>
-      <section class="repos mt-5 justify-content-center d-md-flex row p-5">
+      <!-- <section id="Repos" class="repos mt-5 justify-content-center d-md-flex row p-5">
         <h1 class="text-center pb-5 ">Repos</h1>
-
+      
+      </section> -->
+      <section id="Contact" class="contact text-white mt-5">
+        <div class="container">
+          <h1 class="text-center">Contact Form</h1>
+          <form action="https://formspree.io/f/moqzooaa" method="POST">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" class="form-control" required></textarea>
+            </div>
+      
+           
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+          </form>
+        </div>
+        
+       
+        
       </section>
     </main>
     <footer>
       <!-- place footer here -->
-      <footer class="bg-dark text-light py-5">
+      <footer class=" text-black py-5">
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <h5>About Us</h5>
+              <h5>About Me</h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ali Ibrahim Faour<br/>
+                Abu Dhabi, AUH, UAE
+
               </p>
             </div>
             <div class="col-md-4">
-              <h5>Contact Us</h5>
+              <h5>Contact Me</h5>
               <ul class="list-unstyled">
-                <li><a href="#">Phone: 123-456-7890</a></li>
-                <li><a href="#">Email: info@example.com</a></li>
-                <li><a href="#">Address: 123 Main St, Anytown USA</a></li>
+                <li><a href="#">Phone: +971504270258</a></li>
+                <li><a href="#">Email: ali2001faour@outlook.com</a></li>
+                <li><a href="#">Address: Al Khaldiya, Abu Dhabi UAE </a></li>
               </ul>
             </div>
             <div class="col-md-4">
-              <h5>Connect With Us</h5>
+              <h5>Connect With Me</h5>
               <ul class="list-unstyled">
                 <li>
-                  <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                  <a href=""><i class="fab fa-linkedin"></i> LinkedIn</a>
                 </li>
+                
                 <li>
-                  <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                  <a href="https://github.com/Cyberfaour"><i class="fab fa-github"></i> GitHub</a>
                 </li>
-                <li>
-                  <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                </li>
+                
               </ul>
             </div>
           </div>
           <hr />
           <div class="row">
-            <div class="col-md-6">
-              <p>&copy; 2023 My Company. All Rights Reserved.</p>
+            <div class="col-md-12 text-center">
+              <p>&copy; 2023 Ali Faour. All Rights Reserved.</p>
             </div>
-            <div class="col-md-6 text-md-end">
-              <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Terms of Use</a></li>
-                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-                <li class="list-inline-item"><a href="#">Cookie Policy</a></li>
-              </ul>
-            </div>
+            
           </div>
         </div>
       </footer>
     </footer>
 
     <!-- Bootstrap JavaScript Libraries -->
-
+     <!-- Include Google reCAPTCHA JavaScript -->
+     
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

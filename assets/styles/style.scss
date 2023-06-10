@@ -13,7 +13,7 @@
 }
 body {
   scroll-behavior: smooth;
-  background: rgb(0, 0, 0);
+  background: #140021;
   font-family: "Lucida Console", Monaco, monospace;
 
 }
@@ -25,15 +25,21 @@ a {
 a:hover {
   color: inherit;
 }
-
 h1 {
   font-family: "Aquire", sans-serif;
 }
 
 header {
   font-family: "Aquire", sans-serif;
-  background: url("../images/tech.gif");
-  color: rgb(252, 178, 17);
+  background: url("../images/layered-steps-haikei\ \(2\).svg") no-repeat;
+  
+  height: 85vh;
+  color: #ffffff;
+  .container{
+     padding: 2px;
+    // border-right: #ffffff 1px solid;
+    // border-bottom: #ffffff 1px solid ;
+  }
   .avatar {
     background: url("../images/avatar.jpeg");
     width: 13rem;
@@ -46,23 +52,64 @@ header {
   i {
     font-size: 20px;
   }
+  .navbar{
+    font-size: 24px;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  
+    .navbar-toggler {
+      border: none; /* Remove border */
+      outline: none; /* Remove outline */
+      background-color: transparent; /* Remove background color */
+    }
+    
+    .navbar-toggler-icon {
+      background-image: url('data:image/svg+xml;charset=UTF-8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="rgba(0, 0, 0, 0.5)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>'); /* Set the 'X' icon */
+      width: 20px; /* Set the width */
+      height: 20px; /* Set the height */
+    }
+    
+  }
+  p{
+    font-family: "Lucida Console", Monaco, monospace;
+    
+  }
+  .wrap{
+    margin-top: 70px;
+  }
+  .chevron{
+    background: url("../images/chevron-double-down-svgrepo-com.svg");
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    animation: chevronAnimation 3s infinite ;
+    margin-top: 5rem !important;
+    
+  }
 }
 
 .about {
-  background: rgb(31, 30, 30);
-  box-shadow: 1rem 1rem rgb(252, 178, 17);
+  background: #330155;
+  box-shadow: 1rem 1rem #9b06b9;
   transition: box-shadow 1s ease-in-out  ;
+  height: 75vh;
+  // border-radius: 25px;
   .card {
     box-shadow: -5px -5px 1px rgba(252, 247, 250, 0.829);
-    background: #000000;
+    background: #9b06b95e;
     filter: blur(0.4px);
   }
 }
 .about:hover{
-  box-shadow: 1rem -1rem rgb(252, 248, 0);
+  box-shadow: 1rem -1rem white;
 }
 
+
 .projects {
+ 
   i {
     font-size: 45px;
     
@@ -76,16 +123,16 @@ header {
       color 1s ease-in-out;
   }
   .card:hover {
-    background-color: #000000;
-    color: lawngreen;
-    box-shadow: -5px -5px 1px lawngreen;
+    background-color:#9b06b9;
+    color: white;
+    box-shadow: -5px -5px 1px white;
     
   }
 
 }
 .skills{
     background: rgba(252, 247, 250, 0.829) ;
-    box-shadow: -1rem 1rem lawngreen;
+    box-shadow: -1rem 1rem #7b2ab1;
     transition:box-shadow 1s ease-in-out;
     ul {
         list-style: none;
@@ -131,8 +178,11 @@ header {
       }
 }
 .skills:hover{
-  box-shadow: 1rem -1rem rgb(252, 248, 0);
+  box-shadow: 1rem -1rem #9b06b9;
 
+}
+footer{
+  background: url(../images/layered-steps-haikei\ \(4\).svg);
 }
 .repos{
   h1{
@@ -141,15 +191,26 @@ header {
 }
 @keyframes border_color {
     0%{
-       border:  rgb(252, 107, 17) solid 0.2rem;
+       border:  rgb(252, 252, 252) solid 0.2rem;
     }
     50%{
-        border:  rgb(252, 178, 17) solid 0.2rem;
+        border:  rgb(158, 17, 252) solid 0.2rem;
 
     }
     100%{
-        border:  rgb(252, 107, 17) solid 0.2rem;
+        border:  rgb(255, 255, 255) solid 0.2rem;
 
     }
     
+}
+@keyframes chevronAnimation {
+  0% {
+    transform: translateY(0); /* Start at the default position */
+  }
+  50% {
+    transform: translateY(-100%); /* Move up by 100% of the height */
+  }
+  100% {
+    transform: translateY(0); /* Move back to the default position */
+  }
 }
