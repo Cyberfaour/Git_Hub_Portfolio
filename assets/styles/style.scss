@@ -218,6 +218,11 @@ footer{
 
  .about ,header{
   height: 48rem;
+  .card{
+    width: 22rem !important;
+    vertical-align: middle;
+    
+  }
   .carousel {
     display: none;
   }}
